@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-surface: #18181b;
+  --color-primary: #2563eb;
+  --color-secondary: #06b6d4;
+  --color-foreground: #fafafa;
+  --color-muted-foreground: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-sans: var(--font-geist-sans);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  --spacing-section: clamp(5rem, 10vw, 9rem);
+
+  --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 48px rgba(37, 99, 235, 0.16);
+}
+
+:root {
+  color-scheme: dark;
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-background);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(37, 99, 235, 0.2), transparent 28rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18rem), var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.35);
+  color: var(--color-foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

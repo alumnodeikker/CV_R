@@ -1,0 +1,15 @@
+:root {
+  --portfolio-bg: #09090b;
+  --portfolio-surface: #18181b;
+  --portfolio-primary: #2563eb;
+  --portfolio-secondary: #06b6d4;
+  --portfolio-text: #fafafa;
+  --portfolio-muted: #a1a1aa;
+  --portfolio-border: rgba(255, 255, 255, 0.08);
+  --portfolio-radius-sm: 0.5rem;
+  --portfolio-radius-md: 0.75rem;
+  --portfolio-radius-lg: 1rem;
+  --portfolio-space-section: clamp(5rem, 10vw, 9rem);
+  --portfolio-shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --portfolio-transition: 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
