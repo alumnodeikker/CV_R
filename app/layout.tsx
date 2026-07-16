@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Inter } from "next/font/google";
 import Script from "next/script";
 import type { ReactNode } from "react";
 
 import "./globals.css";
 
-import { siteConfig } from "@/constants/site";
+import { profile } from "@/data/profile";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -13,32 +13,37 @@ const geist = Geist({
   display: "swap"
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(profile.siteUrl),
   title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`
+    default: profile.fullName,
+    template: `%s | ${profile.name}`
   },
-  description: siteConfig.description,
-  keywords: [...siteConfig.keywords],
-  authors: [{ name: siteConfig.creator }],
-  creator: siteConfig.creator,
+  description: profile.description,
+  keywords: [...profile.keywords],
+  authors: [{ name: profile.fullName }],
+  creator: profile.fullName,
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: siteConfig.locale,
+    title: profile.fullName,
+    description: profile.description,
+    url: profile.siteUrl,
+    siteName: profile.name,
+    locale: "es_ES",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    creator: "@cruzreinaldo"
+    title: profile.fullName,
+    description: profile.description
   },
   icons: {
     icon: "/icon.svg",
@@ -61,15 +66,17 @@ export const viewport: Viewport = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: siteConfig.name,
-  url: siteConfig.url,
-  jobTitle: "Software Engineer",
-  sameAs: ["https://github.com/", "https://www.linkedin.com/"]
+  name: profile.fullName,
+  url: profile.siteUrl,
+  jobTitle: profile.role,
+  telephone: profile.phone,
+  email: profile.email,
+  sameAs: [profile.github, profile.linkedin].filter((item) => item !== "TODO")
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="es" className={geist.variable} suppressHydrationWarning>
+    <html lang="es" className={`${geist.variable} ${inter.variable}`} suppressHydrationWarning>
       <body>
         <Script
           id="person-schema"

@@ -9,7 +9,8 @@
   --color-muted-foreground: #a1a1aa;
   --color-border: rgba(255, 255, 255, 0.08);
 
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
+  --font-inter: var(--font-inter);
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
@@ -19,6 +20,8 @@
 
   --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.35);
   --shadow-glow: 0 0 48px rgba(37, 99, 235, 0.16);
+
+  --breakpoint-xs: 25.75rem;
 }
 
 :root {
@@ -42,9 +45,13 @@ body {
     radial-gradient(circle at 50% -10%, rgba(37, 99, 235, 0.2), transparent 28rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18rem), var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), var(--font-geist-sans), system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+main {
+  overflow: clip;
 }
 
 a {

@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { navItems, siteConfig } from "@/constants/site";
+import { navItems, profile } from "@/data/profile";
 import { useScrollState } from "@/hooks/use-scroll-state";
 import { cn } from "@/lib/utils";
 
@@ -24,10 +24,10 @@ export function Navbar() {
         aria-label="Navegacion principal"
       >
         <a href="#top" className="text-sm font-semibold tracking-[0.18em] text-foreground">
-          {siteConfig.brand}
+          {profile.brand}
         </a>
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -42,7 +42,7 @@ export function Navbar() {
         <Button
           variant="ghost"
           size="sm"
-          className="md:hidden"
+          className="lg:hidden"
           aria-label={isOpen ? "Cerrar menu de navegacion" : "Abrir menu de navegacion"}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
@@ -58,7 +58,7 @@ export function Navbar() {
       {isOpen ? (
         <div
           id="mobile-navigation"
-          className="border-t border-border bg-background/90 px-5 py-4 backdrop-blur-xl md:hidden"
+          className="border-t border-border bg-background/90 px-5 py-4 backdrop-blur-xl lg:hidden"
         >
           <div className="mx-auto grid max-w-6xl gap-1">
             {navItems.map((item) => (

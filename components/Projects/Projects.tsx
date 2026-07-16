@@ -1,28 +1,34 @@
 import { AnimatedSection } from "@/components/AnimatedSection/AnimatedSection";
+import { CaseStudy } from "@/components/CaseStudy/CaseStudy";
 import { Container } from "@/components/Container/Container";
-import { Heading } from "@/components/Heading/Heading";
-import { Paragraph } from "@/components/Paragraph/Paragraph";
-import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 import { Section } from "@/components/Section/Section";
-import { projectPlaceholders } from "@/constants/site";
+import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
-    <Section id="projects">
+    <Section id="projects" className="bg-black">
       <Container>
         <AnimatedSection>
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <Heading>Proyectos</Heading>
-              <Paragraph className="mt-5">
-                Area lista para crecer hacia casos de estudio, galerias con next/image y metricas de
-                impacto.
-              </Paragraph>
-            </div>
+          <div className="mx-auto mb-16 max-w-5xl text-center">
+            <h2 className="text-balance text-6xl font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-200 to-emerald-300 bg-clip-text text-transparent">
+                Proyectos
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
+                Desarrollados
+              </span>
+            </h2>
+            <p className="mx-auto mt-12 max-w-4xl text-pretty text-2xl font-semibold leading-10 text-zinc-500">
+              Los siguientes proyectos forman parte de mi experiencia práctica y reflejan mi forma
+              de abordar cada desafío: analizar las necesidades, diseñar la mejor solución y
+              desarrollar productos digitales con especial atención a la experiencia del usuario, la
+              organización del código y la calidad del resultado final.
+            </p>
           </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            {projectPlaceholders.map((project) => (
-              <ProjectCard key={project.title} project={project} />
+          <div className="mt-14 space-y-8">
+            {projects.map((project, index) => (
+              <CaseStudy key={project.title} project={project} index={index} />
             ))}
           </div>
         </AnimatedSection>

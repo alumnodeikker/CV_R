@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 
-import { siteConfig } from "@/constants/site";
+import { profile } from "@/data/profile";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: siteConfig.name,
-    short_name: siteConfig.brand,
-    description: siteConfig.description,
+    name: profile.fullName,
+    short_name: profile.brand,
+    description: profile.description,
     start_url: "/",
     display: "standalone",
     background_color: "#09090B",
