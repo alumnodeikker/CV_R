@@ -179,7 +179,7 @@ function MobileHero() {
           width={1086}
           height={1448}
           priority
-          className="absolute right-[-6.5rem] top-16 h-[58svh] max-h-[32rem] w-auto max-w-none scale-x-[-1] object-contain opacity-95 [filter:brightness(1.12)_contrast(1.04)] [mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,.12)_13%,black_28%,black_82%,transparent_100%)]"
+          className="absolute right-[-4.25rem] top-16 h-[58svh] max-h-[32rem] w-auto max-w-none scale-x-[-1] object-contain opacity-95 xs:right-[-3.25rem] [filter:brightness(1.12)_contrast(1.04)] [mask-image:linear-gradient(to_right,transparent_0%,rgba(0,0,0,.12)_13%,black_28%,black_82%,transparent_100%)]"
           sizes="100vw"
         />
         <div className="absolute bottom-[8rem] right-[17.5rem] h-[58svh] w-28 bg-gradient-to-r from-black via-black/72 to-transparent blur-xl" />

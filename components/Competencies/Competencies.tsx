@@ -23,7 +23,7 @@ export function Competencies() {
             <Badge className="border-white/20 bg-white/15 text-white">
               Capacidades profesionales
             </Badge>
-            <h2 className="mt-8 text-balance text-6xl font-semibold leading-[0.95] tracking-normal sm:text-8xl lg:text-[8.5rem]">
+            <h2 className="mt-8 text-balance text-[clamp(3rem,13vw,6rem)] font-semibold leading-[0.95] tracking-normal sm:text-8xl lg:text-[8.5rem]">
               <span className="bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent drop-shadow-[0_12px_60px_rgba(255,255,255,.22)]">
                 Competencias
               </span>
