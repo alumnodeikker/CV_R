@@ -10,7 +10,7 @@ export function Projects() {
       <Container>
         <AnimatedSection>
           <div className="mx-auto mb-16 max-w-5xl text-center">
-            <h2 className="text-balance text-6xl font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
+            <h2 className="text-balance text-[clamp(3rem,13vw,3.75rem)] font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-200 to-emerald-300 bg-clip-text text-transparent">
                 Proyectos
               </span>

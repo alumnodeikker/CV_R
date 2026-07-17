@@ -22,7 +22,7 @@ export function Skills() {
         <AnimatedSection className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-5xl text-center">
             <p className="text-2xl font-semibold text-foreground">Stack profesional</p>
-            <h2 className="mt-8 text-balance text-6xl font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
+            <h2 className="mt-8 text-balance text-[clamp(3rem,13vw,3.75rem)] font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
               <span className="bg-gradient-to-r from-cyan-200 via-sky-300 to-blue-500 bg-clip-text text-transparent">
                 Tecnologías
               </span>

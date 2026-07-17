@@ -19,7 +19,7 @@ export function CaseStudy({ project, index }: CaseStudyProps) {
 
       <div className="max-w-xl lg:pl-8">
         <Badge>PROYECTO 0{index + 1}</Badge>
-        <h3 className="mt-6 text-5xl font-semibold leading-[0.95] tracking-normal sm:text-6xl">
+        <h3 className="mt-6 text-[clamp(2.6rem,12vw,3rem)] font-semibold leading-[0.95] tracking-normal sm:text-6xl">
           {project.title}
         </h3>
         <p className="mt-6 text-lg leading-8 text-muted-foreground">{project.subtitle}</p>

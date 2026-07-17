@@ -35,7 +35,9 @@ export function Contact() {
           <GlassPanel className="rounded-[2rem] p-8 sm:p-10 lg:p-14">
             <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr]">
               <div>
-                <Heading className="text-5xl sm:text-6xl lg:text-7xl">Contacto</Heading>
+                <Heading className="text-[clamp(2.8rem,12vw,3rem)] sm:text-6xl lg:text-7xl">
+                  Contacto
+                </Heading>
                 <Paragraph className="mt-5">{profile.fullName}</Paragraph>
                 <div className="mt-8">
                   <Button asChild>

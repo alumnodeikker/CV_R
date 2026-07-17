@@ -9,7 +9,7 @@ export function About() {
       <Container>
         <AnimatedSection className="mx-auto max-w-5xl">
           <div className="space-y-8">
-            <h2 className="text-balance text-5xl font-semibold leading-[0.96] tracking-normal sm:text-7xl lg:text-8xl">
+            <h2 className="text-balance text-[clamp(2.65rem,11vw,3rem)] font-semibold leading-[0.96] tracking-normal sm:text-7xl lg:text-8xl">
               <span className="bg-gradient-to-r from-blue-500 via-violet-400 via-pink-400 to-orange-500 bg-clip-text text-transparent">
                 Sobre mí
               </span>

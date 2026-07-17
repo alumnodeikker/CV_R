@@ -11,7 +11,7 @@ export function Experience() {
         <AnimatedSection className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-5xl text-center">
             <p className="text-2xl font-semibold text-foreground">Trayectoria</p>
-            <h2 className="mt-8 text-balance text-6xl font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
+            <h2 className="mt-8 text-balance text-[clamp(3rem,13vw,3.75rem)] font-semibold leading-[0.92] tracking-normal sm:text-8xl lg:text-[8.5rem]">
               <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
                 Experiencia
               </span>
@@ -53,7 +53,7 @@ export function Experience() {
                 <div className="relative grid gap-10 lg:grid-cols-[0.72fr_1fr]">
                   <div>
                     <Badge>{role.period}</Badge>
-                    <h3 className="mt-6 text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+                    <h3 className="mt-6 text-[clamp(2rem,9vw,2.25rem)] font-semibold leading-tight tracking-normal sm:text-5xl">
                       <span className="bg-gradient-to-r from-white via-cyan-100 to-blue-300 bg-clip-text text-transparent">
                         {role.title}
                       </span>

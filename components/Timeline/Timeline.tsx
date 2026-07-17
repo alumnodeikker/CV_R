@@ -16,7 +16,7 @@ export function Timeline() {
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-zinc-500">
               Formación
             </p>
-            <h2 className="mt-7 text-balance text-5xl font-semibold leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl">
+            <h2 className="mt-7 text-balance text-[clamp(2.75rem,11vw,3rem)] font-semibold leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl">
               <span className="bg-gradient-to-r from-cyan-200 via-sky-300 to-blue-500 bg-clip-text text-transparent">
                 {program.title}
               </span>
@@ -35,7 +35,7 @@ export function Timeline() {
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-zinc-500">
                   Especialización aplicada
                 </p>
-                <h3 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-normal text-white sm:text-5xl">
+                <h3 className="mt-5 text-balance text-[clamp(2rem,9vw,2.25rem)] font-semibold leading-tight tracking-normal text-white sm:text-5xl">
                   De la idea al despliegue con criterio técnico
                 </h3>
                 <div className="mt-8 space-y-6 text-lg font-medium leading-8 text-zinc-500">
